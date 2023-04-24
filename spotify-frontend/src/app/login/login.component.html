@@ -1,0 +1,20 @@
+<h1>Login Form</h1>
+<br>
+<form [formGroup]= "loginform" (ngSubmit)="sendLoginData()">
+    Email Id <input type="text" formControlName="emailId"/>
+    <br>
+    Password <input type="password" formControlName="password"/>
+    <br>
+    <input type="submit" value="Login"/>
+</form>
+<!-- <div [formGroup]="loginform" (ngSubmit)="sendLoginData()">
+    <label for="">Email</label>
+    <input type="text" formControlName="email">
+    <label for="">Password</label>
+    <input type="text" formControlName="password">
+    <div>
+        <button type="submit" (click)="sendLoginData()" [disabled]="loginform.invalid">
+            Submit
+        </button>
+    </div>
+</div> -->

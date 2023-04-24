@@ -1,0 +1,9 @@
+h1{
+    width: 100%;
+    color: rgb(83, 14, 126);
+    background-color: bisque;
+    font-weight: bolder ;
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}

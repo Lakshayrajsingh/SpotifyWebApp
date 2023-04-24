@@ -1,0 +1,75 @@
+<h1>SignUp Form</h1>
+<br>
+<div>
+    <!-- <form [formGroup]="signupForm" (ngSubmit)="sendSignupData()"> -->
+    <form [formGroup]="signupForm" (ngSubmit)="sendSignupData()">
+        <!-- <br>
+        Email Id <input type="email" formControlName="emailId"/>
+        <br>
+        Password <input type="password" formControlName="password"/>
+        <br> -->
+        <div class="email">
+            <mat-form-field appearance="fill" class="form-field">
+                <mat-label>Email</mat-label>
+                <input matInput formControlName="emailId" name="emailId">
+                <mat-error *ngIf="signupForm.get('emailId')?.hasError('required')">This field is required</mat-error>
+            </mat-form-field>
+        </div>
+        
+        <!-- user Name <input type="text" formControlName="userName"/> -->
+        <div class="name">
+            <mat-form-field appearance="fill" class="form-field">
+                <mat-label>User Name</mat-label>
+                <input matInput formControlName="userName" name="name">
+                <mat-error *ngIf="signupForm.get('userName')?.hasError('required')">This field is required
+                </mat-error>
+            </mat-form-field>
+        </div>
+
+        <div class="password">
+            <div>
+                <mat-form-field appearance="fill" class="form-field">
+                    <mat-label>Password</mat-label>
+                    <input matInput formControlName="password" name="password" type="password">
+                    <mat-error *ngIf="signupForm.get('password')?.hasError('required')">This field is required
+                    </mat-error>
+                    <mat-error *ngIf="signupForm.value.password">Password must be a combination of lower-case,
+                        upper-case, special symbol
+                        numbers and at least 9 characters long</mat-error>
+                    </mat-form-field>
+            </div>
+        </div>
+            <!-- Mobile No <input type="number" formControlName="mobileNo"/>
+            <br> -->
+            <div class="phoneNumber">
+                <mat-form-field appearance="fill" class="form-field">
+                    <mat-label>phone Number </mat-label>
+                    <input matInput formControlName="phoneNumber" name="name">
+                    <mat-error *ngIf="signupForm.get('phoneNumber')?.hasError('required')">This field is required
+                    </mat-error>
+                    <mat-error *ngIf="signupForm.get('phoneNumber')?.hasError('pattern')">Number should starts with 7, 8 and
+                        9 only
+                    </mat-error>
+
+                </mat-form-field>
+            </div>
+        
+            <!-- Address <input type="text" formControlName="address"/>
+            <br> -->
+            <div class="address">
+                <mat-form-field appearance="fill" class="form-field">
+                    <mat-label>Address</mat-label>
+                    <input matInput formControlName="address" name="name">
+                    <mat-error *ngIf="signupForm.get('address')?.hasError('required')">This field is required
+                    </mat-error>
+                </mat-form-field>
+            </div>
+
+            <div>
+                <!-- <input type="submit" value="Signup"/> -->
+                <button color="accent" mat-button mat-raised-button type="reset">Reset</button>
+                <button color="primary" mat-button mat-raised-button [disabled]="!signupForm.valid"
+                    type="submit">SignUp</button>
+            </div>    
+    </form>
+</div>

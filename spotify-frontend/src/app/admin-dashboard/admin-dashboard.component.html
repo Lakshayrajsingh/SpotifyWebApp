@@ -1,0 +1,54 @@
+<h1>Admin Dashboard</h1>
+<h3>Add New Song</h3>
+<hr>
+<form [formGroup]="songForm" (ngSubmit)="sendSongData()">
+    Song ID <input type="text" formControlName="songId"/>
+    <br>
+    Song Name <input type="text" formControlName="songName"/>
+    <br>
+    genre <input type="text" formControlName="genre"/>
+    <br>
+    Artist Name <input type="text" formControlName="artistName"/>
+    <br>
+    <input type="submit" value="Add Song"/>
+</form>
+<br>
+<hr>
+<h3>Display Songs</h3>
+<br>
+<table border="1">
+    <thead>
+        <th>Song ID</th>
+        <th>Song Name</th>
+        <th>Genre</th>
+        <th>Artist Name</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let p of allSongs">
+             <td>{{p.songId}}</td>
+             <td>{{p.songName}}</td>
+             <td>{{p.genre}}</td>
+             <td>{{p.artistName}}</td>
+             <td>
+                <button (click) ="getEditableSong(p)">Edit</button>
+                <button (click)="deleteSong(p.songId)">Delete</button>
+             </td>
+        </tr>
+    </tbody>
+</table>
+<br>
+<hr>
+<h3>Edit Song</h3>
+<br>
+<form [formGroup]="editSongForm" (ngSubmit)="updateSong()">
+    Song ID <input type="text" formControlName="songId" readonly/>
+    <br>
+    Song Name <input type="text" formControlName="songName"/>
+    <br>
+    genre <input type="text" formControlName="genre"/>
+    <br>
+    Artist Name <input type="text" formControlName="artistName"/>
+    <br>
+    <input type="submit" value="Update Product"/>
+</form>
+    

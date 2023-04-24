@@ -1,0 +1,19 @@
+<div>
+    <h2>Songs Available</h2>
+    <table border="1">
+        <thead>
+            <th>Song ID</th>
+            <th>Song Name</th>
+            <th>Genre</th>
+            <th>Artist Name</th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let p of allSongs">
+                <td>{{p.songId}}</td>
+                <td>{{p.songName}}</td>
+                <td>{{p.genre}}</td>
+                <td>{{p.artistName}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

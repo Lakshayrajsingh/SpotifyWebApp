@@ -1,0 +1,58 @@
+<h1>User-View</h1>
+
+<h3>Songs List</h3>
+<table border="1">
+    <thead>
+        <th>Song ID</th>
+        <th>Song Name</th>
+        <th>Genre</th>
+        <th>Artist Name</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let p of allSongs">
+            <td>{{p.songId}}</td>
+            <td>{{p.songName}}</td>
+            <td>{{p.genre}}</td>
+            <td>{{p.artistName}}</td>
+            <td>
+                <button (click)="addSongToPlaylist(p)">add to playlist</button>
+                <button (click)="playSong(p)">playSong</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<hr>
+<h3>User Playlist</h3>
+
+{{userDetails.songs|json}} 
+
+<hr>
+
+
+
+
+
+
+
+<!-- <table border="1">
+    <thead>
+        <th>Song ID</th>
+        <th>Song Name</th>
+        <th>Genre</th>
+        <th>Artist Name</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let u of userDetails">
+            <td>{{u.userName}}</td>
+            <td>{{u.address}}</td> 
+            <td>{{u.mobileNo}}</td>
+            <td>{{u.Songs}}</td>
+            <td>
+                <button>remove song</button>
+            </td>
+        </tr>
+    </tbody>
+</table> -->
+<!-- <div *ngFor="let u of userDetails">
+    emailId = {{u.emailId}}
+</div> -->

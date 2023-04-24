@@ -1,0 +1,27 @@
+div{
+    margin-top: -75px;
+    margin-left: -5px;
+    margin-right: -5px;
+    background-color: cadetblue;
+    padding-bottom: 390PX;
+}
+
+h2{
+    padding-top: 40px;
+    padding-bottom: 20PX;
+    text-align: center;
+    color: beige;
+}
+
+table{
+    text-align: center;
+    margin-left: 610px;
+}
+
+thead{
+    background-color:darkcyan;
+}
+
+tbody{
+    background-color: cornflowerblue;
+}
